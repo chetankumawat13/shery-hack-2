@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+:root{--accent-pink:#9b4dff;--accent-peach:#6b2a5a;--muted:#9a9a9a;--bg-dark:#0b0710;--neon-purple:#9b4dff;--neon-pink:#ff4da6}
+.app-container { font-family: 'Segoe UI', Poppins, system-ui, Arial; padding: 20px; background: linear-gradient(135deg,#fff6fb,#fffef6); min-height:100vh; color:#222 }
+.head { display:flex; justify-content:space-between; align-items:center; gap:12px }
+.app-root { font-family: system-ui, Arial; padding: 18px; }
+.app-root header { display:flex; align-items:center; justify-content:space-between }
+.app-root header h1 { margin:0; font-size:18px }
+.app-root nav button { margin-left:8px }
+.screen { padding:24px; border:1px solid #eee; margin-top:18px; border-radius:8px }
+.landing .runaway { padding:12px 20px; background:#ff6b6b; color:white; border:none; border-radius:8px; cursor:pointer }
+.muted { color:#666 }
+.signup label { display:block; margin:8px 0 }
+.requirements { margin:8px 0; background:#faf0f0; padding:8px; border-radius:6px }
+.req { font-size:13px; color:#b33 }
+.age-msg { color:#b33; margin-top:6px }
+.tc-modal { margin:12px 0 }
+.tc-box { height:120px; overflow:auto; border:1px solid #ddd; padding:8px; background:#fff }
+.create { margin-top:12px; padding:10px 14px; }
+
+.swipe .profile-card { display:flex; align-items:center; gap:12px; margin-bottom:12px }
+.avatar { font-size:48px }
+.controls { display:flex; gap:12px }
+.btn { padding:10px 18px; border-radius:8px; border:none; cursor:pointer }
+.btn.gray { background:#ddd; color:#111 }
+.btn.pink { background:#ff6bb7; color:white }
+.loading { margin-top:12px }
+
+.modal { position:fixed; left:50%; top:30%; transform:translateX(-50%); background:white; border:1px solid #ccc; padding:16px; border-radius:8px; box-shadow:0 6px 30px rgba(0,0,0,0.12) }
+.modal.match { background:linear-gradient(135deg,#fff0f6,#ffeef8) }
+.modal.virus { background:#fff6e6 }
+.modal.premium .guilt { background:transparent; border:none; color:#444; text-decoration:underline }
+
+.chat .messages { height:240px; overflow:auto; display:flex; flex-direction:column-reverse; gap:8px; border:1px solid #eee; padding:8px }
+.msg { background:#f1f1f1; padding:8px; border-radius:6px }
+.composer { display:flex; gap:8px; margin-top:8px }
+.composer textarea { flex:1; height:60px }
+.send { padding:8px 12px }
+.typing { margin-top:8px; color:#b33 }
+
+.foot { margin-top:18px; color:#888 }
+
+/* Extra cursed feature styles */
+.app-container { font-family: system-ui, Arial; padding: 12px }
+.head { display:flex; justify-content:space-between; align-items:center }
+.logo { font-weight:700 }
+.notifications { cursor:default }
+.notifications .unread { background:#c33; color:white; padding:2px 6px; border-radius:999px; margin-left:6px; cursor:pointer }
+
+.overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4); z-index:40 }
+.dead-end { background:white; padding:16px; border-radius:8px; width:320px; text-align:center }
+
+.virus-popup { position:fixed; right:20px; bottom:20px; background:#fff3f3; padding:12px; border:2px solid #f4c2c2; border-radius:8px; z-index:50 }
+.virus-bar { width:260px; height:12px; background:#eee; border-radius:6px; overflow:hidden; margin-top:8px }
+.virus-bar > i { display:block; height:100%; background:linear-gradient(90deg,#ff8a8a,#ff4d4d); width:0%; transition:width 400ms linear }
+
+.app-lock { position:fixed; inset:0; background:rgba(0,0,0,0.85); color:white; display:flex; align-items:center; justify-content:center; z-index:999 }
+
+.chat-window .msg.user.pending { opacity:0.6; font-style:italic }
+
+/* Chaotic Cute Bold UI overrides */
+:root{--accent-pink:#ff6bb7;--accent-peach:#ffb86b;--muted:#6b6b6b}
+.app-container { font-family: 'Segoe UI', Poppins, system-ui, Arial; padding: 20px; background: linear-gradient(135deg,#fff6fb,#fffef6); min-height:100vh; color:#222 }
+.head { display:flex; justify-content:space-between; align-items:center; gap:12px }
+.logo { font-weight:800; font-size:20px; color:var(--accent1); text-shadow:0 4px 12px rgba(255,107,183,0.18) }
+.notifications { cursor:default }
+.notifications .unread { background:linear-gradient(90deg,var(--accent1),#ff4d8a); color:white; padding:6px 10px; border-radius:999px; margin-left:6px; cursor:pointer; box-shadow:0 6px 18px rgba(255,107,183,0.18); font-weight:700 }
+
+.floating-hearts { position:fixed; pointer-events:none; inset:0; overflow:hidden; z-index:0 }
+.floating-hearts span { position:absolute; font-size:20px; opacity:0.9; transform:translateY(0); animation:floatUp 6s linear infinite; filter:drop-shadow(0 8px 18px rgba(255,107,183,0.18)) }
+@keyframes floatUp { 0%{transform:translateY(20vh) scale(0.6); opacity:0} 10%{opacity:1} 100%{transform:translateY(-10vh) scale(1.1); opacity:0} }
+
+.content { max-width:980px; margin:18px auto; position:relative; z-index:1 }
+.view-landing { background:linear-gradient(180deg,#fff,#fff7fb); border-radius:18px; padding:36px; box-shadow:0 12px 40px rgba(255,107,183,0.08); display:flex; gap:20px; align-items:center }
+.view-landing h1 { font-size:36px; margin:0; color:#ff2d95; letter-spacing:0.6px }
+.cta { background:linear-gradient(90deg,var(--accent1),var(--accent2)); color:white; border:none; padding:14px 22px; border-radius:14px; font-weight:800; cursor:pointer; box-shadow:0 14px 40px rgba(255,107,183,0.12); transform:skewX(-6deg); transition:transform 160ms ease, box-shadow 160ms }
+.cta:hover { transform:skewX(-6deg) translateY(-6px) scale(1.03); box-shadow:0 20px 48px rgba(255,107,183,0.18) }
+
+.view-signup { background:linear-gradient(180deg,#fff7fb,#fff1f8); border-radius:14px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,0.04) }
+.field { margin:10px 0 }
+.field input, .field textarea { width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(0,0,0,0.06); font-size:15px }
+.req { background:linear-gradient(90deg,#fff0f6,#fff6f9); padding:8px; border-radius:8px; display:inline-block; margin:6px 6px 0 0; color:#b03 }
+
+.view-swipe { display:flex; gap:18px; align-items:flex-start }
+.card { width:320px; border-radius:16px; overflow:hidden; box-shadow:0 20px 50px rgba(255,107,183,0.08); border:4px solid rgba(255,107,183,0.06) }
+.card img { width:100%; display:block }
+.info { padding:12px; background:linear-gradient(180deg,#fff,#fff6fb) }
+.swipe-actions { display:flex; gap:12px; margin-left:12px }
+.swipe-no, .swipe-yes { padding:12px 18px; border-radius:12px; border:none; font-weight:800; cursor:pointer }
+.swipe-no { background:#f0f0f0 }
+.swipe-yes { background:linear-gradient(90deg,#ff6bb7,#ff8a6b); color:white }
+
+.overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 20% 10%, rgba(255,107,183,0.12), rgba(0,0,0,0.35)); z-index:40 }
+.dead-end { background:white; padding:16px; border-radius:8px; width:320px; text-align:center; box-shadow:0 12px 40px rgba(255,107,183,0.08) }
+
+.virus-popup { position:fixed; right:20px; bottom:20px; background:#fff3f3; padding:12px; border:2px solid #f4c2c2; border-radius:8px; z-index:50 }
+.virus-bar { width:260px; height:12px; background:#eee; border-radius:6px; overflow:hidden; margin-top:8px }
+.virus-bar > i { display:block; height:100%; background:linear-gradient(90deg,#ff8a8a,#ff4d4d); width:0%; transition:width 400ms linear }
+
+.app-lock { position:fixed; inset:0; background:rgba(0,0,0,0.85); color:white; display:flex; align-items:center; justify-content:center; z-index:999 }
+
+.chat-window .msg.user.pending { opacity:0.6; font-style:italic }
+
+/* Chaotic Cute Bold UI overrides */
+:root{--accent-pink:#ff6bb7;--accent-peach:#ffb86b;--muted:#6b6b6b}
+.app-container { font-family: 'Segoe UI', Poppins, system-ui, Arial; padding: 20px; background: linear-gradient(135deg,#fff6fb,#fffef6); min-height:100vh; color:#222 }
+.head { display:flex; justify-content:space-between; align-items:center; gap:12px }
+.logo { font-weight:800; font-size:20px; color:var(--accent1); text-shadow:0 4px 12px rgba(255,107,183,0.18) }
+.notifications { cursor:default }
+.notifications .unread { background:linear-gradient(90deg,var(--accent1),#ff4d8a); color:white; padding:6px 10px; border-radius:999px; margin-left:6px; cursor:pointer; box-shadow:0 6px 18px rgba(255,107,183,0.18); font-weight:700 }
+
+.floating-hearts { position:fixed; pointer-events:none; inset:0; overflow:hidden; z-index:0 }
+.floating-hearts span { position:absolute; font-size:20px; opacity:0.9; transform:translateY(0); animation:floatUp 6s linear infinite; filter:drop-shadow(0 8px 18px rgba(255,107,183,0.18)) }
+@keyframes floatUp { 0%{transform:translateY(20vh) scale(0.6); opacity:0} 10%{opacity:1} 100%{transform:translateY(-10vh) scale(1.1); opacity:0} }
+
+.content { max-width:980px; margin:18px auto; position:relative; z-index:1 }
+.view-landing { background:linear-gradient(180deg,#fff,#fff7fb); border-radius:18px; padding:36px; box-shadow:0 12px 40px rgba(255,107,183,0.08); display:flex; gap:20px; align-items:center }
+.view-landing h1 { font-size:36px; margin:0; color:#ff2d95; letter-spacing:0.6px }
+.cta { background:linear-gradient(90deg,var(--accent1),var(--accent2)); color:white; border:none; padding:14px 22px; border-radius:14px; font-weight:800; cursor:pointer; box-shadow:0 14px 40px rgba(255,107,183,0.12); transform:skewX(-6deg); transition:transform 160ms ease, box-shadow 160ms }
+.cta:hover { transform:skewX(-6deg) translateY(-6px) scale(1.03); box-shadow:0 20px 48px rgba(255,107,183,0.18) }
+
+.view-signup { background:linear-gradient(180deg,#fff7fb,#fff1f8); border-radius:14px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,0.04) }
+.field { margin:10px 0 }
+.field input, .field textarea { width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(0,0,0,0.06); font-size:15px }
+.req { background:linear-gradient(90deg,#fff0f6,#fff6f9); padding:8px; border-radius:8px; display:inline-block; margin:6px 6px 0 0; color:#b03 }
+
+.view-swipe { display:flex; gap:18px; align-items:flex-start }
+.card { width:320px; border-radius:16px; overflow:hidden; box-shadow:0 20px 50px rgba(255,107,183,0.08); border:4px solid rgba(255,107,183,0.06) }
+.card img { width:100%; display:block }
+.info { padding:12px; background:linear-gradient(180deg,#fff,#fff6fb) }
+.swipe-actions { display:flex; gap:12px; margin-left:12px }
+.swipe-no, .swipe-yes { padding:12px 18px; border-radius:12px; border:none; font-weight:800; cursor:pointer }
+.swipe-no { background:#f0f0f0 }
+.swipe-yes { background:linear-gradient(90deg,#ff6bb7,#ff8a6b); color:white }
+
+.overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 20% 10%, rgba(255,107,183,0.12), rgba(0,0,0,0.35)); z-index:40 }
+.dead-end { background:white; padding:16px; border-radius:8px; width:320px; text-align:center; box-shadow:0 12px 40px rgba(255,107,183,0.08) }
+
+.virus-popup { position:fixed; right:20px; bottom:20px; background:#fff3f3; padding:12px; border:2px solid #f4c2c2; border-radius:8px; z-index:50 }
+.virus-bar { width:260px; height:12px; background:#eee; border-radius:6px; overflow:hidden; margin-top:8px }
+.virus-bar > i { display:block; height:100%; background:linear-gradient(90deg,#ff8a8a,#ff4d4d); width:0%; transition:width 400ms linear }
+
+.app-lock { position:fixed; inset:0; background:rgba(0,0,0,0.85); color:white; display:flex; align-items:center; justify-content:center; z-index:999 }
+
+.chat-window .msg.user.pending { opacity:0.6; font-style:italic }
+.app-root nav button { margin-left:8px }
+.screen { padding:24px; border:1px solid #eee; margin-top:18px; border-radius:8px }
+.landing .runaway { padding:12px 20px; background:#ff6b6b; color:white; border:none; border-radius:8px; cursor:pointer }
+.muted { color:#666 }
+.signup label { display:block; margin:8px 0 }
+.requirements { margin:8px 0; background:#faf0f0; padding:8px; border-radius:6px }
+.req { font-size:13px; color:#b33 }
+.age-msg { color:#b33; margin-top:6px }
+.tc-modal { margin:12px 0 }
+.tc-box { height:120px; overflow:auto; border:1px solid #ddd; padding:8px; background:#fff }
+.create { margin-top:12px; padding:10px 14px; }
+
+.swipe .profile-card { display:flex; align-items:center; gap:12px; margin-bottom:12px }
+.avatar { font-size:48px }
+.controls { display:flex; gap:12px }
+.btn { padding:10px 18px; border-radius:8px; border:none; cursor:pointer }
+.btn.gray { background:#ddd; color:#111 }
+.btn.pink { background:#ff6bb7; color:white }
+.loading { margin-top:12px }
+
+.modal { position:fixed; left:50%; top:30%; transform:translateX(-50%); background:white; border:1px solid #ccc; padding:16px; border-radius:8px; box-shadow:0 6px 30px rgba(0,0,0,0.12) }
+.modal.match { background:linear-gradient(135deg,#fff0f6,#ffeef8) }
+.modal.virus { background:#fff6e6 }
+.modal.premium .guilt { background:transparent; border:none; color:#444; text-decoration:underline }
+
+.chat .messages { height:240px; overflow:auto; display:flex; flex-direction:column-reverse; gap:8px; border:1px solid #eee; padding:8px }
+.msg { background:#f1f1f1; padding:8px; border-radius:6px }
+.composer { display:flex; gap:8px; margin-top:8px }
+.composer textarea { flex:1; height:60px }
+.send { padding:8px 12px }
+.typing { margin-top:8px; color:#b33 }
+
+.foot { margin-top:18px; color:#888 }
+
+/* Extra cursed feature styles */
+.app-container { font-family: system-ui, Arial; padding: 12px }
+.head { display:flex; justify-content:space-between; align-items:center }
+.logo { font-weight:700 }
+.notifications { cursor:default }
+.notifications .unread { background:#c33; color:white; padding:2px 6px; border-radius:999px; margin-left:6px; cursor:pointer }
+
+.overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4); z-index:40 }
+.dead-end { background:white; padding:16px; border-radius:8px; width:320px; text-align:center }
+
+.virus-popup { position:fixed; right:20px; bottom:20px; background:#fff3f3; padding:12px; border:2px solid #f4c2c2; border-radius:8px; z-index:50 }
+.virus-bar { width:260px; height:12px; background:#eee; border-radius:6px; overflow:hidden; margin-top:8px }
+.virus-bar > i { display:block; height:100%; background:linear-gradient(90deg,#ff8a8a,#ff4d4d); width:0%; transition:width 400ms linear }
+
+.app-lock { position:fixed; inset:0; background:rgba(0,0,0,0.85); color:white; display:flex; align-items:center; justify-content:center; z-index:999 }
+
+.chat-window .msg.user.pending { opacity:0.6; font-style:italic }
+
+/* Chaotic Cute Bold UI overrides */
+:root{--accent-pink:#ff6bb7;--accent-peach:#ffb86b;--muted:#6b6b6b}
+.app-container{background:linear-gradient(135deg,#fff6fb,#fffef6);min-height:100vh}
+.head{gap:12px}
+.logo{font-size:22px;color:var(--accent-pink);font-weight:900;text-shadow:0 6px 18px rgba(255,107,183,0.12)}
+.notifications .unread{font-weight:900;padding:6px 10px}
+
+.floating-hearts{position:fixed;inset:0;pointer-events:none;z-index:0}
+.floating-hearts span{position:absolute;font-size:20px;animation:floatUp 5s linear infinite;opacity:0.95}
+@keyframes floatUp{0%{transform:translateY(80vh) scale(0.5);opacity:0}10%{opacity:1}100%{transform:translateY(-10vh) scale(1.1);opacity:0}}
+
+.content{max-width:980px;margin:18px auto;position:relative}
+.view-landing{display:flex;align-items:center;justify-content:space-between;padding:36px;border-radius:18px;background:linear-gradient(90deg,#fff,#fff8fb);box-shadow:0 20px 50px rgba(255,107,183,0.06)}
+.view-landing h1{font-size:40px;color:#ff2d95;margin:0}
+.cta{border-radius:16px;padding:14px 24px;font-weight:900;box-shadow:0 12px 30px rgba(255,107,183,0.12);transform:skewX(-6deg)}
+.cta:hover{transform:skewX(-6deg) translateY(-6px) scale(1.03)}
+
+.joke-pill{display:inline-block;margin-top:6px;background:linear-gradient(90deg,#fff,#fff0f6);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:700;box-shadow:0 8px 20px rgba(255,107,183,0.06)}
+.sub{margin-top:8px;color:#9b6b6b;font-weight:700}
+
+.cta{font-size:18px}
+.cta-gold{background:linear-gradient(90deg,#ffd36b,#ff8a6b);padding:10px 14px;border-radius:12px;border:none;font-weight:800}
+
+.tiny{font-size:12px;color:#aa8899;margin-top:8px}
+
+.view-signup{border-radius:14px;padding:20px;background:linear-gradient(180deg,#fff,#fff7fb)}
+.field input{border-radius:12px;padding:12px}
+.req{border-radius:10px;padding:8px 10px;margin-right:8px}
+
+.view-swipe{display:flex;gap:18px}
+.card{width:340px;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(255,107,183,0.08)}
+.swipe-actions{align-self:center}
+.swipe-no,.swipe-yes{padding:14px 22px;border-radius:14px;font-weight:900}
+.swipe-yes{background:linear-gradient(90deg,var(--neon-pink),var(--neon-purple));color:#07020b}
+.swipe-actions{display:flex;gap:10px;align-items:center}
+.swipe-rewind, .swipe-super, .swipe-block { padding:12px 14px; border-radius:12px; border:none; cursor:pointer; font-size:18px }
+.swipe-rewind { background:transparent; color:var(--blood-red); border:1px dashed rgba(155,77,255,0.06) }
+.swipe-no { background: rgba(255,255,255,0.03); color:#d9cfff }
+.swipe-super { background: linear-gradient(90deg,#ffd36b,#ff8a6b); color:#20080b; box-shadow:0 20px 60px rgba(255,160,80,0.06) }
+.swipe-block { background: linear-gradient(90deg, rgba(139,0,0,0.12), rgba(155,77,255,0.04)); color:var(--blood-red) }
+.swipe-rewind:hover, .swipe-super:hover, .swipe-block:hover, .swipe-no:hover, .swipe-yes:hover { transform: translateY(-4px); }
+
+.overlay{backdrop-filter:blur(4px)}
+.dead-end{border-radius:16px;padding:20px}
+
+.virus-popup{border-radius:12px;padding:14px;border:2px dashed rgba(255,107,183,0.15)}
+.virus-bar>i{background:linear-gradient(90deg,#ffd6ec,#ff6bb7)}
+
+.view-chat{border-radius:12px;padding:14px}
+.chat-window{border-radius:12px;padding:12px;background:linear-gradient(180deg,#fff,#fff8fb)}
+.chat-window{ display:flex; flex-direction:column; gap:8px; max-height:360px; overflow:auto; padding:18px }
+
+/* Message bubble & meta */
+.chat-window .bubble{ padding:12px 16px; border-radius:14px; font-size:15px; line-height:1.3; box-shadow:0 12px 28px rgba(0,0,0,0.25); backdrop-filter: blur(6px) }
+.chat-window .msg.bot .bubble{ background: linear-gradient(90deg, rgba(40,10,60,0.24), rgba(30,8,50,0.18)) !important; color:#ffe8ff !important; align-self:flex-start }
+.chat-window .msg.user{ align-self:flex-end }
+.chat-window .msg.user .bubble{ background: linear-gradient(90deg, rgba(155,77,255,0.18), rgba(255,77,166,0.12)) !important; color:#07020b !important }
+.meta{ font-size:12px; color:var(--blood-red); margin-top:6px; opacity:0.9 }
+
+/* Chat input area */
+.chat-input{ display:flex; gap:10px; align-items:flex-end; margin-top:12px }
+.message-input{ flex:1; min-height:60px; resize:vertical; padding:12px; border-radius:12px; border:1px solid rgba(155,77,255,0.06); background: rgba(18,0,24,0.6); color:#f3e6ee }
+.chat-actions{ display:flex; gap:8px; align-items:center }
+.attach{ padding:10px 12px; border-radius:10px; background:transparent; border:1px dashed rgba(155,77,255,0.06); color:var(--blood-red); cursor:pointer }
+.attach:hover{ transform:translateY(-2px) }
+.send{ padding:10px 16px; border-radius:12px; background:linear-gradient(90deg,var(--neon-pink),var(--neon-purple)); border:none; color:#07020b; font-weight:900; cursor:pointer; box-shadow:0 18px 60px rgba(155,77,255,0.12); transition:transform 120ms ease }
+.send:hover{ transform:translateY(-4px) scale(1.02) }
+.send:active{ transform:translateY(-2px) scale(0.99) }
+
+.msg.pending .bubble{ opacity:0.7; filter:grayscale(30%) }
+.msg{border-radius:12px;padding:10px;margin:8px 0;max-width:78%}
+.msg.bot{background:linear-gradient(90deg,#fff7ff,#fffaf7);align-self:flex-start}
+.msg.user{background:linear-gradient(90deg,#fff1f9,#ffeef8);align-self:flex-end}
+
+.app-lock{display:flex;align-items:center;justify-content:center}
+
+/* Messy maximalist decorations */
+.mess-panels { position:fixed; inset:0; pointer-events:none; z-index:0 }
+.mess-panel { position:absolute; background:linear-gradient(90deg, rgba(255,80,120,0.12), rgba(255,180,100,0.06)); color:rgba(0,0,0,0.12); display:flex; align-items:center; justify-content:center; font-weight:900; letter-spacing:2px; transform-origin:center; border-radius:6px; box-shadow:0 20px 60px rgba(0,0,0,0.25) }
+.mess-panel:nth-child(odd){background:linear-gradient(90deg, rgba(80,80,255,0.06), rgba(140,80,255,0.08)); color:rgba(255,255,255,0.06)}
+
+.sticker { position:fixed; pointer-events:none; opacity:0.95; transform:rotate(-12deg); font-size:28px; filter:drop-shadow(0 12px 34px rgba(0,0,0,0.4)) }
+
+/* Dark / Horror Theme Overrides */
+.app-container { background: radial-gradient(800px 400px at 10% 10%, rgba(155,77,255,0.06), transparent), linear-gradient(180deg,#030006,#07010a); color:#f0e6ff }
+.logo { font-family: 'Creepster', serif; color:var(--neon-purple); text-shadow:0 8px 28px rgba(155,77,255,0.18) }
+.joke-pill { background:transparent; color:#c9b3ff; border:1px dashed rgba(155,77,255,0.12); box-shadow:none }
+.view-landing { border:1px solid rgba(155,77,255,0.08); background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)) }
+.view-landing h1 { color:var(--neon-pink); font-family: 'Nosifer', 'Creepster', serif; text-shadow:0 8px 24px rgba(255,77,166,0.06) }
+.cta { color:#07020b; background:linear-gradient(90deg,var(--neon-pink),var(--neon-purple)); box-shadow:0 30px 90px rgba(155,77,255,0.12) }
+.view-signup, .view-chat, .card { border:1px solid rgba(155,77,255,0.06); }
+.field input, .field textarea { background: rgba(255,255,255,0.02); color:#e9dcff; border:1px solid rgba(155,77,255,0.04) }
+.msg { color:#f6ebff; border:1px solid rgba(155,77,255,0.04) }
+.msg.user { background: linear-gradient(90deg, rgba(120,40,160,0.12), rgba(60,10,80,0.12)) }
+.msg.bot { background: linear-gradient(90deg, rgba(20,10,35,0.2), rgba(40,6,60,0.22)) }
+.dead-end { background: linear-gradient(180deg,#0b0710,#190426); color:#efdfff; border:1px solid rgba(155,77,255,0.06) }
+.virus-popup { border:1px solid rgba(155,77,255,0.12); box-shadow:0 30px 90px rgba(155,77,255,0.08) }
+.mess-panel { mix-blend-mode:overlay }
+
+/* Glitch accents */
+.glitch { position:relative }
+.glitch::before, .glitch::after{content:attr(data-text);position:absolute;left:0;top:0;mix-blend-mode:screen;opacity:0.6}
+.glitch::before{color:#ff4da6;transform:translate(2px,-2px);filter:blur(1px)}
+.glitch::after{color:#9b4dff;transform:translate(-2px,2px);filter:blur(2px)}
+
+/* Signup (2nd page) and Swipe (3rd page) font + color overrides */
+.view-signup { font-family: 'Nosifer', 'Creepster', serif; color:#eedaff }
+.view-signup h1, .view-signup h2 { font-family: 'Creepster', 'Nosifer', serif; color:var(--neon-purple); text-shadow:0 8px 30px rgba(155,77,255,0.14) }
+.view-signup .cta { background:linear-gradient(90deg,var(--neon-purple),#7b2eff); color:#fff; box-shadow:0 28px 80px rgba(123,46,255,0.12) }
+.view-signup .field input, .view-signup .field textarea { border:1px solid rgba(155,77,255,0.06); color:#f3eaff; caret-color:var(--neon-pink) }
+.view-signup .req { background:transparent; color:#d6b8ff; border:1px dashed rgba(155,77,255,0.04) }
+
+.view-swipe { font-family: 'Segoe UI', Poppins, system-ui, Arial; color:#efe6ff }
+.view-swipe h1, .view-swipe h2 { font-family: 'Creepster', 'Nosifer', serif; color:var(--neon-pink); text-shadow:0 8px 24px rgba(255,77,166,0.08) }
+.card { background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)); border:1px solid rgba(155,77,255,0.04) }
+.info { color:#f1e8ff }
+.swipe-yes { background:linear-gradient(90deg,var(--neon-pink),var(--neon-purple)); color:#07020b }
+.swipe-no { background:rgba(255,255,255,0.03); color:#d9cfff }
+
+/* Replace whites with deep purple and light-gray fonts with blood red */
+:root{--blood-red:#8b0000;--deep-purple:#120018}
+
+/* Background replacements */
+.app-container, .content, .view-landing, .view-signup, .view-chat, .card, .chat-window, .modal, .dead-end, .virus-popup { background: linear-gradient(180deg, var(--deep-purple), #070014) !important; color: #f3dede }
+.view-landing h1, .view-signup h1, .view-swipe h1, .view-chat h1 { color: #ffdfe0 }
+
+/* Inputs and panels */
+.field input, .field textarea, .tc-box { background: rgba(18,0,24,0.6) !important; border:1px solid rgba(155,77,255,0.04); color:#f8eaea }
+
+/* Replace light-gray text with blood red */
+.muted, .tiny, .sub, .req, .age-msg, .foot, .notifications .unread { color: var(--blood-red) !important }
+.joke-pill { color: var(--blood-red); border-color: rgba(139,0,0,0.12) }
+
+/* Adjust message bubbles to fit dark theme */
+.msg { background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(155,77,255,0.04); color:#ffecec }
+.msg.user { background: linear-gradient(90deg, rgba(120,40,160,0.08), rgba(60,10,80,0.08)) }
+.msg.bot { background: linear-gradient(90deg, rgba(20,10,35,0.16), rgba(40,6,60,0.18)) }
+
+/* Buttons contrast */
+.cta, .swipe-yes { box-shadow:0 30px 90px rgba(139,0,0,0.08); }
+.cta { color:#fff }
+
+/* Enhanced I Agree button */
+.agree-btn { display:inline-block; margin-top:8px; padding:10px 14px; border-radius:12px; border:2px solid var(--neon-pink); background:linear-gradient(90deg, rgba(255,77,166,0.12), rgba(155,77,255,0.06)); color:#fff; font-family:'Creepster', 'Nosifer', serif; font-size:16px; letter-spacing:0.8px; cursor:pointer; box-shadow:0 10px 40px rgba(155,77,255,0.12); transition:transform 180ms ease, box-shadow 180ms ease}
+.agree-btn:hover { transform:translateY(-4px) scale(1.03); box-shadow:0 18px 70px rgba(155,77,255,0.18) }
+.agree-btn:active { transform:translateY(-2px) scale(0.99) }
+.agree-btn { position:relative; overflow:visible }
+.agree-btn::after { content:''; position:absolute; inset:-6px; border-radius:16px; background:radial-gradient(circle at 30% 30%, rgba(255,77,166,0.12), transparent 30%); opacity:0; transition:opacity 320ms }
+.agree-btn:hover::after { opacity:1 }
+
+/* Pulse animation for attention */
+@keyframes pulse-neon { 0% { box-shadow: 0 0 0 0 rgba(155,77,255,0.06) } 70% { box-shadow: 0 0 0 18px rgba(155,77,255,0.02) } 100% { box-shadow: 0 0 0 0 rgba(155,77,255,0) } }
+.agree-btn.pulse { animation: pulse-neon 2.6s infinite }
+
+/* Confirmation image modal */
+.confirm-modal { width:520px; max-width:92vw; background:linear-gradient(180deg,#0d0610,#14021a); padding:18px; border-radius:12px; box-shadow:0 30px 120px rgba(0,0,0,0.6); text-align:center }
+.confirm-img { width:100%; height:280px; object-fit:cover; border-radius:8px; border:4px solid rgba(155,77,255,0.06); margin-bottom:12px }
+.confirm-actions{ display:flex; gap:12px; justify-content:center; margin-top:12px }
+.confirm-modal h3{ font-family:'Creepster', 'Nosifer', serif; color:#ffdfe0; margin:8px 0 }
+
+/* Dead-end zero-dates image */
+.dead-end { padding:18px; max-width:380px }
+.dead-end .zero-img { width:100%; height:180px; object-fit:cover; border-radius:10px; border:3px solid rgba(155,77,255,0.06); box-shadow:0 20px 60px rgba(0,0,0,0.6) }
+.dead-end h3{ margin:10px 0 6px 0; color:#ffdfe0; font-family:'Creepster', 'Nosifer', serif }
+.dead-end .zero-msg{ color:var(--blood-red); font-weight:800; margin:0 0 6px 0 }
+
+.toast{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: hotpink;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    z-index: 9999;
+    animation: popup 0.4s ease;
+    font-weight: bold;
+  }
+  
+  @keyframes popup{
+    from{
+      transform: translateY(-20px);
+      opacity:0;
+    }
+    to{
+      transform: translateY(0);
+      opacity:1;
+    }
+  }
+
+  .compatibility{
+    position:absolute;
+    top:100px;
+    left:20px;
+    background:black;
+    color:lime;
+    padding:10px;
+    border-radius:10px;
+    font-weight:bold;
+    animation:flicker 0.5s infinite alternate;
+  }
+  
+  @keyframes flicker{
+   from{
+     opacity:0.5;
+   }
+   to{
+     opacity:1;
+   }
+  }
+
+
+
+
